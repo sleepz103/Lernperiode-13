@@ -19,4 +19,4 @@ Ich benutze GlazeWM, das in Rust geschrieben ist. Deswegen wurden meine Interess
 Es ist auch die Sprache neben React, welche nachgefragt wird. 
 Für ein kurzes Lernperiode möchte ich es mal ausprobieren.
 
-Finale Entscheid: React
+Finale Entscheid: Rust
