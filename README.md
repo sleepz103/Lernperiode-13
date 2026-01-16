@@ -30,7 +30,7 @@ Heute habe ich für drei Technologien kurz recherchieret und mein Entscheid begr
 - [x] Anhand Tutorial werde ich Benutzern erlauben, ihre Name einzugeben. Dann wird der Benutzer begrüsst.
 https://www.youtube.com/watch?v=PQBX-ev5q2k&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ&index=5
 
-- [ ] Falls die Name länger als sechs Buchstaben ist, soll der Programm fragen, ob der Benutzer ein Nickname für sich selbst erstellen will. Dann wird wieder mit neuen Nickname begrüsst.
+- [x] Falls die Name länger als sechs Buchstaben ist, soll der Programm fragen, ob der Benutzer ein Nickname für sich selbst erstellen will. Dann wird wieder mit neuen Nickname begrüsst.
 https://www.youtube.com/watch?v=MOa7ulhNYc0&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ&index=7&pp=iAQB
 
 - [ ] Der Benutzer kann zwischen 1 und 2 wählen, um entweder seine Name zu ändern oder eine zufällige Zahl zurückzubekommen. Die Aufgaben werden durch Funktionen übernommen.
