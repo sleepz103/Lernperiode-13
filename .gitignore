@@ -1,6 +1,6 @@
 *.exe
 *.pdb
 
-tutorial1/target
 **/*.rs.bk
 *.toml
+*/target
