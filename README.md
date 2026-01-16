@@ -33,10 +33,32 @@ https://www.youtube.com/watch?v=PQBX-ev5q2k&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqj
 - [x] Falls die Name länger als sechs Buchstaben ist, soll der Programm fragen, ob der Benutzer ein Nickname für sich selbst erstellen will. Dann wird wieder mit neuen Nickname begrüsst.
 https://www.youtube.com/watch?v=MOa7ulhNYc0&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ&index=7&pp=iAQB
 
+- [x] Arbeitspaket anpassung: RobinTea Fragen beantworten 
+
 - [ ] Der Benutzer kann zwischen 1 und 2 wählen, um entweder seine Name zu ändern oder eine zufällige Zahl zurückzubekommen. Die Aufgaben werden durch Funktionen übernommen.
 https://www.youtube.com/watch?v=APrANyLHCtQ&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ&index=9
 
+
+
+Heute habe ich für den Anfang Zeit verbracht, @RobinTea mit Projektidee auszuhelfen. Es hat gut funktioniert, da ich eine Erfahrung mit Full-Stack Web-App habe. Danach habe ich den zweiten Tutorial angeschaut und paar einzelne main.rs geschrieben. Ich habe dabei gelernt (mut für variablen, trim to string) und auch ins Fehler gefallen (semicolon sind sehr wichtig, .chars().count()). (56)
+
+
+## 23.01
+
 - [ ] Number Guesser: Wenn Programm gestartet wurde und Spieler begrüsst hat, gibt ein Benutzer eine Zahl, bekommt er Nachricht, ob er zu hoch oder zu tief war
+
+- [ ] Number Guesser: Wenn das Spiel schon angefangen hat, soll die Spiel weiter nach Zahlen fragen, bis die richtige Zahl geschrieben wird
+
+- [ ] Number Guesser: Menu mit Hardcore mode, wenn der Benutzer nach vier Versuchen nicht getroffen hat, soll die Spiel aufhören
+
+- [ ] Number Guesser: Die Anzahl Gewonnene und verloreene Spiele wird lokal in Datei gespeichert
+
+
+## 30.1
+
+- [ ] Der Programm wird so wenig wie möglich Heap Stack verwenden
+https://www.youtube.com/watch?v=-6cnnNlAvNk&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ&index=9
+
 
 # Tutorials
 
