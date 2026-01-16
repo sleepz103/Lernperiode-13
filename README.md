@@ -27,7 +27,7 @@ Heute habe ich für drei Technologien kurz recherchieret und mein Entscheid begr
 
 ## 16.01
 
-- [ ] Anhand Tutorial werde ich Benutzern erlauben, ihre Name einzugeben. Dann wird der Benutzer begrüsst.
+- [x] Anhand Tutorial werde ich Benutzern erlauben, ihre Name einzugeben. Dann wird der Benutzer begrüsst.
 https://www.youtube.com/watch?v=PQBX-ev5q2k&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ&index=5
 
 - [ ] Falls die Name länger als sechs Buchstaben ist, soll der Programm fragen, ob der Benutzer ein Nickname für sich selbst erstellen will. Dann wird wieder mit neuen Nickname begrüsst.
@@ -49,3 +49,5 @@ https://www.youtube.com/watch?v=gvgBUY8iNO4&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqj
 `cargo build` build .exe 
 `cargo run` compile and run
 `rustfmt main.rs` format code
+`input.trim()` remove \n from input
+`let mut input = String::new();` declare string variable
