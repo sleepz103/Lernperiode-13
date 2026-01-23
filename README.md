@@ -49,7 +49,8 @@ Heute habe ich für den Anfang Zeit verbracht, @RobinTea mit Projektidee auszuhe
 
 - [x] Number Guesser: Wenn das Spiel schon angefangen hat, soll die Spiel weiter nach Zahlen fragen, bis die richtige Zahl geschrieben wird
 
-- [ ] Number Guesser: Menu mit Hardcore mode, wenn der Benutzer nach vier Versuchen nicht getroffen hat, soll die Spiel aufhören
+- [x] Number Guesser: Menu mit Hardcore mode, wenn der Benutzer nach vier Versuchen nicht getroffen hat, soll die Spiel aufhören
+https://www.geeksforgeeks.org/rust/rust-switch-case/
 
 - [ ] Number Guesser: Die Anzahl Gewonnene und verloreene Spiele wird lokal in Datei gespeichert
 
