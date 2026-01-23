@@ -2,6 +2,25 @@ use std::io;
 use std::io::Write;
 use rand::Rng;
 fn main() {
+
+    let mut userMenuChoice = String::new();
+    let mut userMenuChoiceNum :i32 = 0;
+
+
+    println!("Choose difficulty: \none: Normal \n2: Hard (not implemented)");
+
+    io::stdin().read_line(&mut userMenuChoice)
+    .expect("Failed to read userInput.");
+    userMenuChoiceNum = userMenuChoice.trim().parse()
+    .expect("Please enter a valid number!");
+
+    match userMenuChoiceNum {
+        1=>game(),
+        _=>println!("Failed to choose.")
+    }    
+}
+
+fn game() {
     let mut rng = rand::thread_rng().gen_range(0..100); // must be between 1 and 100
     let mut username = String::new();
     let mut userGuess :i32 = 0;
@@ -38,5 +57,4 @@ fn main() {
             println!("Your guess was lower than the hidden number.")
         }
     } 
-    
 }
