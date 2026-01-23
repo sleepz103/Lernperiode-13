@@ -55,6 +55,9 @@ https://www.geeksforgeeks.org/rust/rust-switch-case/
 - [ ] Number Guesser: Die Anzahl Gewonnene und verloreene Spiele wird lokal in Datei gespeichert
 
 
+Heute habe ich mit Erfolg gearbeitet. Ich habe zuerst kommentaren geschrieben, um mir ein Blick auf kommende Programmstruktur zu machen. Dann Schritt für Schritt habe ich Kommentaren in Rust übersetzt, anfangs mit was ich wusste, bis nach einer Recherche über int. Ich habe mühe mit Datentypen, aber sonst war switch einfach. Aber wegen den Syntax-Errors habe ich mir eine Extension installiert, um sie sehen und vor Laufzeit beheben. Um weiter fortzufahren, muss ich ein Tutorial zur Daten und Parsing schauen. Ausserdem habe ich gelernt, dass Rust nicht gerne strings indexiert. (90)
+
+
 ## 30.1
 
 - [ ] Der Programm wird so wenig wie möglich Heap Stack verwenden
