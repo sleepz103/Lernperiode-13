@@ -45,9 +45,9 @@ Heute habe ich für den Anfang Zeit verbracht, @RobinTea mit Projektidee auszuhe
 
 ## 23.01
 
-- [ ] Number Guesser: Wenn Programm gestartet wurde und Spieler begrüsst hat, gibt ein Benutzer eine Zahl, bekommt er Nachricht, ob er zu hoch oder zu tief war
+- [x] Number Guesser: Wenn Programm gestartet wurde und Spieler begrüsst hat, gibt ein Benutzer eine Zahl, bekommt er Nachricht, ob er zu hoch oder zu tief war
 
-- [ ] Number Guesser: Wenn das Spiel schon angefangen hat, soll die Spiel weiter nach Zahlen fragen, bis die richtige Zahl geschrieben wird
+- [x] Number Guesser: Wenn das Spiel schon angefangen hat, soll die Spiel weiter nach Zahlen fragen, bis die richtige Zahl geschrieben wird
 
 - [ ] Number Guesser: Menu mit Hardcore mode, wenn der Benutzer nach vier Versuchen nicht getroffen hat, soll die Spiel aufhören
 
@@ -73,3 +73,16 @@ https://www.youtube.com/watch?v=gvgBUY8iNO4&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqj
 `rustfmt main.rs` format code
 `input.trim()` remove \n from input
 `let mut input = String::new();` declare string variable
+`let mut userGuess :i32 = 0;` declare (signed) int variable
+`u32` - unsigned, only positives + 0, `i32` - unsigned, accounts for negatives
+
+saving user input as int
+```rust
+// Save user input as String
+let mut userInput = String::new();
+io::stdin().read_line(&mut userInput)
+.expect("Failed to read userInput.");
+// parse to before defined int variable
+userGuess = userInput.trim().parse()
+.expect("Please enter a valid number!");
+```
