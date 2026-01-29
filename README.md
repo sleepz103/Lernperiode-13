@@ -52,7 +52,7 @@ Heute habe ich für den Anfang Zeit verbracht, @RobinTea mit Projektidee auszuhe
 - [x] Number Guesser: Menu mit Hardcore mode, wenn der Benutzer nach vier Versuchen nicht getroffen hat, soll die Spiel aufhören
 https://www.geeksforgeeks.org/rust/rust-switch-case/
 
-- [ ] Number Guesser: Die Anzahl Gewonnene und verloreene Spiele wird lokal in Datei gespeichert
+- [x] Number Guesser: Die Anzahl Gewonnene und verloreene Spiele wird lokal in Datei gespeichert
 
 
 Heute habe ich mit Erfolg gearbeitet. Ich habe zuerst kommentaren geschrieben, um mir ein Blick auf kommende Programmstruktur zu machen. Dann Schritt für Schritt habe ich Kommentaren in Rust übersetzt, anfangs mit was ich wusste, bis nach einer Recherche über int. Ich habe mühe mit Datentypen, aber sonst war switch einfach. Aber wegen den Syntax-Errors habe ich mir eine Extension installiert, um sie sehen und vor Laufzeit beheben. Um weiter fortzufahren, muss ich ein Tutorial zur Daten und Parsing schauen. Ausserdem habe ich gelernt, dass Rust nicht gerne strings indexiert. (90)
@@ -89,4 +89,12 @@ io::stdin().read_line(&mut userInput)
 // parse to before defined int variable
 userGuess = userInput.trim().parse()
 .expect("Please enter a valid number!");
+```
+
+function with return `fn name() -> value`
+```rust
+fn is_true() -> bool {
+ //...
+ Ok(true)
+}
 ```
