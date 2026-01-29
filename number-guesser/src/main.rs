@@ -5,14 +5,9 @@ use std::io::{Write, Read};
 
 fn main() -> std::io::Result<()> {
 
-    // Read file logic
-    let mut file = File::open("stats.txt")?;
-    let mut statistics = String::new();
-    file.read_to_string(&mut statistics)?;
-    let v: Vec<&str> = statistics.split(',').collect();
-    let mut win :i32  = v.get(0).unwrap_or(&"0").parse().unwrap_or(0);
-    let mut lose :i32 = v.get(1).unwrap_or(&"0").parse().unwrap_or(0);
-    println!("Statistics\nWins: {win}\nLosses: {lose}");
+    let stats = read_file()?;
+    let win: i32 = stats.get(0).and_then(|s| s.parse().ok()).unwrap_or(0);
+    let lose: i32 = stats.get(1).and_then(|s| s.parse().ok()).unwrap_or(0);
 
     let mut userMenuChoice = String::new();
     let mut userMenuChoiceNum :i32 = 0;
@@ -60,6 +55,7 @@ fn game() {
 
         if userGuess == rng {
             println!("Congratulations. The hidden number was: {}", rng);
+
             break;
         }
 
@@ -120,3 +116,13 @@ fn gameHard() {
         }
     }
 }
+
+fn read_file () -> std::io::Result<Vec<String>>{
+
+    let mut file = File::open("stats.txt")?;
+    let mut statistics = String::new();
+    file.read_to_string(&mut statistics)?;
+    let v: Vec<String> = statistics.split(',').map(|s| s.to_string()).collect();
+    Ok(v)
+
+} 
