@@ -1,7 +1,18 @@
 use std::io;
-use std::io::Write;
 use rand::Rng;
-fn main() {
+use std::fs::File;
+use std::io::{Write, Read};
+
+fn main() -> std::io::Result<()> {
+
+    // Read file logic
+    let mut file = File::open("stats.txt")?;
+    let mut statistics = String::new();
+    file.read_to_string(&mut statistics)?;
+    let v: Vec<&str> = statistics.split(',').collect();
+    let mut win :i32  = v.get(0).unwrap_or(&"0").parse().unwrap_or(0);
+    let mut lose :i32 = v.get(1).unwrap_or(&"0").parse().unwrap_or(0);
+    println!("Statistics\nWins: {win}\nLosses: {lose}");
 
     let mut userMenuChoice = String::new();
     let mut userMenuChoiceNum :i32 = 0;
@@ -15,9 +26,9 @@ fn main() {
     .expect("Please enter a valid number!");
 
     match userMenuChoiceNum {
-        1=>game(),
-        2=>gameHard(),
-        _=>println!("Failed to choose.")
+        1=>Ok(game()),
+        2=>Ok(gameHard()),
+        _=>Ok(println!("Failed to choose."))
     }    
 }
 
