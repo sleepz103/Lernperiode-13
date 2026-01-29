@@ -8,14 +8,12 @@ fn main() -> std::io::Result<()> {
     let mut statistics = String::new();
     file.read_to_string(&mut statistics)?;
 
-    // wrong: What if bigger that one char, for ex. 10?
-    let mut win: i32 = statistics.chars().nth(0).unwrap() as i32;  // First character (win)
-    let mut lose: i32 = statistics.chars().nth(2).unwrap() as i32; // Third character (lose, after comma)
+    let v: Vec<&str> = statistics.split(',').collect();
 
-    // Displays correctly
+    let mut win :i32  = v.get(0).unwrap_or(&"0").parse().unwrap_or(0);
+    let mut lose :i32 = v.get(1).unwrap_or(&"0").parse().unwrap_or(0);
     println!("File content: {}", statistics);
 
-    // Error displays: 0,0 in file turns to 52 and 44
     println!("Wins: {}", win);
     println!("Losses: {}", lose);
 
