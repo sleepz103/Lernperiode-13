@@ -9,6 +9,8 @@ fn main() -> std::io::Result<()> {
     let win: i32 = stats.get(0).and_then(|s| s.parse().ok()).unwrap_or(0);
     let lose: i32 = stats.get(1).and_then(|s| s.parse().ok()).unwrap_or(0);
 
+    println!("Statistics (Hard Mode only) \nWins: {win}\nLosses: {lose}");
+
     let mut userMenuChoice = String::new();
     let mut userMenuChoiceNum :i32 = 0;
 
@@ -55,7 +57,6 @@ fn game() {
 
         if userGuess == rng {
             println!("Congratulations. The hidden number was: {}", rng);
-
             break;
         }
 
@@ -99,6 +100,7 @@ fn gameHard() {
 
         if userGuess == rng {
             println!("Congratulations. The hidden number was: {}", rng);
+            add_win_to_file();
             break;
         }
 
@@ -112,6 +114,7 @@ fn gameHard() {
 
         if userGuessCount >= 6 {
             println!("After six tries you didn't guess the hidden number {}. You lose.", rng);
+            add_loss_to_file();
             break;
         }
     }
@@ -125,4 +128,36 @@ fn read_file () -> std::io::Result<Vec<String>>{
     let v: Vec<String> = statistics.split(',').map(|s| s.to_string()).collect();
     Ok(v)
 
-} 
+}
+
+fn add_win_to_file () -> Result<(), Box<dyn std::error::Error>> {
+
+    let stats = read_file()?;
+    let win: i32 = stats.get(0).and_then(|s| s.parse().ok()).unwrap_or(0);
+    let lose: i32 = stats.get(1).and_then(|s| s.parse().ok()).unwrap_or(0);
+  
+    let win = &win + 1;
+
+    let new_stats: String = String::from(win.to_string() + "," + &lose.to_string());
+
+    let mut file: File = File::create("stats.txt")?;
+    file.write_all(new_stats.as_bytes())?;
+    println!("Statistics written to file.");
+    Ok(())
+}
+
+fn add_loss_to_file () -> Result<(), Box<dyn std::error::Error>> {
+
+    let stats = read_file()?;
+    let win: i32 = stats.get(0).and_then(|s| s.parse().ok()).unwrap_or(0);
+    let lose: i32 = stats.get(1).and_then(|s| s.parse().ok()).unwrap_or(0);
+  
+    let lose = &lose + 1;
+
+    let new_stats: String = String::from(win.to_string() + "," + &lose.to_string());
+
+    let mut file: File = File::create("stats.txt")?;
+    file.write_all(new_stats.as_bytes())?;
+    println!("Statistics written to file.");
+    Ok(())
+}
