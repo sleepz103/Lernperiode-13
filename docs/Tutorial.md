@@ -28,7 +28,7 @@ Your Rust adventure goes in following order:
     - rust debugger: CodeLLDB
 - Data and Types
 - While, if-else
-- Functions
+- Functions and macros
 
 # Tutorial
 
@@ -180,8 +180,68 @@ if user_guess > rng {
 }
 ```
 
-## Functions
+## Functions and macros
 
-# Result
+Your `main.rs` already comes with a function 
+
+
+### Extra
+
+imagine you want to let user write on the same line you prompt them to:
+
+`print!("Enter nickname: ");`
+
+## Handling exceptions
+
+What in C# is as simple as
+```csharp
+string userInput = Console.ReadLine();
+```
+
+is in Rust
+
+```rust
+let mut user_input = String::new();
+io::stdin().read_line(&mut user_input)
+.expect("Failed to read user_input.");
+```
+
+oftentimes you will find yourself writing `.expect` or accounting for errors because that's just how Rust is
+
+## File I/O - Advanced
+
+# Plans, Code Snippets and Result
+
+At it's core number guesser is about random number, user inputs and if-else statements in a while loop. A perfect test of skills for a beginner
+<img src="/assets/number_guesser_pap.png" alt="vsc_extensions">
+
+snippets here
+
+result here
 
 # What could go wrong?
+
+not knowing how to read from vector (equivalent of list)
+
+```rust
+    let stats = read_file()?;
+    let win: i32 = stats.get(0).and_then(|s| s.parse().ok()).unwrap_or(0); // what is this
+```
+
+not knowing how to parse string to int
+```rust
+    let user_menu_choice_num = user_menu_choice.trim().parse()
+```
+
+not knowing how to read line
+
+```rust
+    io::stdin().read_line(&mut username)
+    .expect("Failed to read username.");
+    username = username.trim().to_string();
+```
+
+not knowing how to combine strings
+```rust
+    let new_stats: String = String::from(win.to_string() + "," + &lose.to_string());
+```
