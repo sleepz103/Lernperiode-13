@@ -43,9 +43,9 @@ First I'll show you necessaries for your environment. You begin by installing th
 
 https://rust-lang.org/learn/get-started/
 
-![welcome_rust](../assets/welcome_rust.png)
+![welcome_rust](/assets/welcome_rust.png)
 
-![installation](../assets/installation.png)
+![installation](/assets/installation.png)
 
 Here choose one and wait. The basic installation comes with language itself and `cargo`. `Cargo` is your project manager and game changer.
 
@@ -65,8 +65,8 @@ Hello, world!
 That's a lot of work though.
 
 ### Cargo
-Instead, you use cargo to do the work.
-`cargo new projectName` init new project
+Instead, you use cargo to do the work.  
+`cargo new projectName` init new project  
 It creates not only `main.rs`, but also manages packages in a structure like
 ```
 projectName
@@ -80,7 +80,7 @@ projectName
 ```
 `main.rs` is where you write your code, `cargo.lock` stores your packages (imports). Rest is to be safely ignored.
 
-Then, inside your project directory, you can run `cargo build` to compile and build .exe from .rs. However, while easier, what you really want to do is `cargo run` to compile and run from project folder directly. No need for changind directories.
+Then, inside your project directory, you can run `cargo build` to compile and build .exe from .rs. However, while easier, what you really want to do is `cargo run` to compile and run from project folder directly. No need for changing directories.
 
 ### .gitignore
 For those who work with git, I mentioned that `main.rs` and `cargo.lock` are only important. Here's where to place `your .gitignore`
@@ -108,7 +108,7 @@ For your IDE (environment to develop your code) I recommend Visual Studio Code. 
     - rust-analyzer
     - debugger: CodeLLDB
 
-![vsc_extensions](../assets/vsc_extensions.png)
+![vsc_extensions](/assets/vsc_extensions.png)
 
 Find these on marketplace. When you got rust, cargo and IDE + extensions setup, you're ready for next steps.
 
