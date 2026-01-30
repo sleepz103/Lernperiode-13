@@ -28,8 +28,13 @@ fn main() -> std::io::Result<()> {
     }    
 }
 
+// game function
+// idea 1: if user chooses hard mode, run same function but hard
+// aspects are blocked behind if statements
+// idea 2: store stats globally for easier access
+
 fn game() {
-    let rng = rand::rng().random_range(0..100); // must be between 1 and 100
+    let rng = rand::rng().random_range(0..100);
     let mut username = String::new();
     let mut user_guess :i32 = 0;
     
@@ -69,7 +74,7 @@ fn game() {
 
 
 fn game_hard() {
-    let rng = rand::rng().random_range(0..100); // must be between 1 and 100
+    let rng = rand::rng().random_range(0..100);
     let mut username = String::new();
     let mut user_guess :i32 = 0;
     let mut user_guess_count :u32 = 0;
@@ -130,7 +135,11 @@ fn read_file () -> std::io::Result<Vec<String>>{
 
 }
 
-fn add_win_to_file () -> Result<(), Box<dyn std::error::Error>> {
+// win & loss funcitons
+// idea 1: have one function handle each case
+// idea 2: values are inserted with parameter
+
+fn add_win_to_file () -> Result<(), Box<dyn std::error::Error>> { 
 
     let stats = read_file()?;
     let win: i32 = stats.get(0).and_then(|s| s.parse().ok()).unwrap_or(0);
