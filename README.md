@@ -60,7 +60,10 @@ Heute habe ich mit Erfolg gearbeitet. Ich habe zuerst kommentaren geschrieben, u
 
 ## 30.1
 
-- [ ] Der Programm wird so wenig wie möglich Heap Stack verwenden
+- [ ] Der Programm wird so wenig wie möglich Heap Stack verwenden = es gibt so viel wie möglich konstante Variablen 
+oder
+- [X] Der Programm wird nach Warnings korrigiert
+- [ ] Der Programm soll verbessert sein, indem teile auf Funktionen verteilt sind
 https://www.youtube.com/watch?v=-6cnnNlAvNk&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ&index=9
 
 

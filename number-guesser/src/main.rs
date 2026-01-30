@@ -11,28 +11,27 @@ fn main() -> std::io::Result<()> {
 
     println!("Statistics (Hard Mode only) \nWins: {win}\nLosses: {lose}");
 
-    let mut userMenuChoice = String::new();
-    let mut userMenuChoiceNum :i32 = 0;
+    let mut user_menu_choice: String = String::new();
 
 
     println!("Choose difficulty: \n1: Normal \n2: Hard (6 shots only)");
 
-    io::stdin().read_line(&mut userMenuChoice)
-    .expect("Failed to read userInput.");
-    userMenuChoiceNum = userMenuChoice.trim().parse()
+    io::stdin().read_line(&mut user_menu_choice)
+    .expect("Failed to read user_menu_choice.");
+    let user_menu_choice_num = user_menu_choice.trim().parse()
     .expect("Please enter a valid number!");
 
-    match userMenuChoiceNum {
+    match user_menu_choice_num {
         1=>Ok(game()),
-        2=>Ok(gameHard()),
+        2=>Ok(game_hard()),
         _=>Ok(println!("Failed to choose."))
     }    
 }
 
 fn game() {
-    let mut rng = rand::thread_rng().gen_range(0..100); // must be between 1 and 100
+    let rng = rand::rng().random_range(0..100); // must be between 1 and 100
     let mut username = String::new();
-    let mut userGuess :i32 = 0;
+    let mut user_guess :i32 = 0;
     
     print!("Enter nickname: ");
     io::stdout().flush().unwrap();
@@ -45,22 +44,22 @@ fn game() {
     println!("Welcome to number guesser.");
     println!("You must guess the hidden number between 0 and 100.");
     
-    while userGuess != rng {
+    while user_guess != rng {
         println!("Your turn.");
 
-        let mut userInput = String::new();
-        io::stdin().read_line(&mut userInput)
-        .expect("Failed to read userInput.");
+        let mut user_input = String::new();
+        io::stdin().read_line(&mut user_input)
+        .expect("Failed to read user_input.");
 
-        userGuess = userInput.trim().parse()
+        user_guess = user_input.trim().parse()
         .expect("Please enter a valid number!");
 
-        if userGuess == rng {
+        if user_guess == rng {
             println!("Congratulations. The hidden number was: {}", rng);
             break;
         }
 
-        if userGuess > rng {
+        if user_guess > rng {
             println!("Your guess was higher than the hidden number.")
         } else {
             println!("Your guess was lower than the hidden number.")
@@ -69,12 +68,11 @@ fn game() {
 }
 
 
-fn gameHard() {
-    let mut rng = rand::thread_rng().gen_range(0..100); // must be between 1 and 100
+fn game_hard() {
+    let rng = rand::rng().random_range(0..100); // must be between 1 and 100
     let mut username = String::new();
-    let mut userGuess :i32 = 0;
-    let maxGuess :u32 = 6;
-    let mut userGuessCount :u32 = 0;
+    let mut user_guess :i32 = 0;
+    let mut user_guess_count :u32 = 0;
     
     print!("Enter nickname: ");
     io::stdout().flush().unwrap();
@@ -88,33 +86,35 @@ fn gameHard() {
     println!("You must guess the hidden number between 0 and 100.");
     println!("You only have 6 tries");
     
-    while userGuess != rng {
+    while user_guess != rng {
         println!("Your turn.");
 
-        let mut userInput = String::new();
-        io::stdin().read_line(&mut userInput)
-        .expect("Failed to read userInput.");
+        let mut user_input = String::new();
+        io::stdin().read_line(&mut user_input)
+        .expect("Failed to read user_input.");
 
-        userGuess = userInput.trim().parse()
+        user_guess = user_input.trim().parse()
         .expect("Please enter a valid number!");
 
-        if userGuess == rng {
+        if user_guess == rng {
             println!("Congratulations. The hidden number was: {}", rng);
-            add_win_to_file();
+            add_win_to_file()
+            .expect("Failed to add win to file!");
             break;
         }
 
-        if userGuess > rng {
+        if user_guess > rng {
             println!("Your guess was higher than the hidden number.")
         } else {
             println!("Your guess was lower than the hidden number.")
         }
 
-        userGuessCount = userGuessCount + 1;
+        user_guess_count = user_guess_count + 1;
 
-        if userGuessCount >= 6 {
+        if user_guess_count >= 6 {
             println!("After six tries you didn't guess the hidden number {}. You lose.", rng);
-            add_loss_to_file();
+            add_loss_to_file()
+            .expect("Failed to add loss to file!");
             break;
         }
     }
