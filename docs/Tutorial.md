@@ -43,9 +43,9 @@ First I'll show you necessaries for your environment. You begin by installing th
 
 https://rust-lang.org/learn/get-started/
 
-![welcome_rust](/assets/welcome_rust.png)
+<img src="/assets/welcome_rust.png" alt="welcome_rust">
 
-![installation](/assets/installation.png)
+<img src="/assets/installation.png" alt="installation">
 
 Here choose one and wait. The basic installation comes with language itself and `cargo`. `Cargo` is your project manager and game changer.
 
@@ -108,7 +108,7 @@ For your IDE (environment to develop your code) I recommend Visual Studio Code. 
     - rust-analyzer
     - debugger: CodeLLDB
 
-![vsc_extensions](/assets/vsc_extensions.png)
+<img src="/assets/vsc_extensions.png" alt="vsc_extensions">
 
 Find these on marketplace. When you got rust, cargo and IDE + extensions setup, you're ready for next steps.
 
