@@ -15,7 +15,25 @@ Though, if you wrote a program before, you're good to go.
 
 # What you'll learn
 
-We'll assume you already know the basics of C# and can...
+Your Rust adventure goes in following order:
+- Necessaries for Rust development/Environment Setup 
+    - cargo
+    - Rust Syntax
+    - rust-analyzer
+    - rust debugger: CodeLLDB
+- Data and Types
+- While, if-else
+- Functions
+
+
+(
+First I'll show you necessaries for your environment. I recommend VSC.
+
+This way you will safely compile a "Hello World" program.
+Then we will move focus to data types.
+Then a short trip to while, if-else
+Next there will be explanation on functions
+)
 
 # Tutorial
 
