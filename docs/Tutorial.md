@@ -38,7 +38,7 @@ First I'll show you necessaries for your environment. You begin by installing th
 
 https://rust-lang.org/learn/get-started/
 
-[<img src="/assets/welcome_rust.png" alt="welcome_rust">](https://raw.githubusercontent.com/sleepz103/Lernperiode-13/refs/heads/main/assets/welcome_rust.png)
+![alt](https://raw.githubusercontent.com/sleepz103/Lernperiode-13/refs/heads/main/assets/welcome_rust.png)
 
 
 <img src="/assets/installation.png" alt="installation">
